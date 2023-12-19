@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+</head>
+<body>
+    <div style="border: 1px solid black; max-width: 300px;">
+        <div style="height: 300px; overflow-y: auto;" id="chatbox"></div>
+        <input type="text" id="chat" style="width: 230px;"> 
+        <button onclick="send()">Kirim</button>
+    </div>
+
+    <script>
+        function send(){
+            // tangkap
+        const chatbox = document.getElementById("chatbox")
+        const chat = document.getElementById("chat")
+
+        // tangkap
+        if(chat == "")
+        alert("Wajib Diisi")
+            // tambahkan
+        chatbox.innerHTML += chat.value + "<br>"
+        //kosomg
+        chat.value = ""
+    }
+    </script>
+</body>
+</html>
